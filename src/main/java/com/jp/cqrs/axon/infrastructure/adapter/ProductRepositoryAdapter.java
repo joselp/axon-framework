@@ -29,7 +29,6 @@ public class ProductRepositoryAdapter {
 
   @QueryHandler
   public List<Product> getProducts(GetProductsQuery query) {
-    System.out.println("------- " + query.getShoppingCarId());
     return productRepository.findByShoppingCarId(query.getShoppingCarId());
   }
 }
